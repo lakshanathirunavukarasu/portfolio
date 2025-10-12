@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakshana Portfolio</title>
+  <style>
+    /* === Base Styles === */
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth;}
+    header {position: fixed; width: 100%; top: 0; left: 0; background: rgba(15,23,42,0.95); display: flex; justify-content: space-between; align-items: center; padding: 15px 60px; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1);}
+    .logo {font-size: 1.8em; font-weight: 700; color: #38bdf8; letter-spacing: 1px;}
+    nav a {color: #f8fafc; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s;}
+    nav a:hover {color: #38bdf8;}
+    
+    section {padding: 100px 60px; min-height: 100vh;}
+    h2 {font-size: 2.3em; margin-bottom: 20px; color: #38bdf8;}
+    p {max-width: 800px; line-height: 1.7; color: #cbd5e1;}
+
+    /* Hero Section */
+    .hero {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center;}
+    .hero h1 {font-size: 3em; color: #f8fafc;}
+    .hero h1 span {color: #38bdf8;}
+    .hero p {font-size: 1.2em; margin-top: 10px; color: #94a3b8;}
+    .btn {margin-top: 25px; padding: 10px 25px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s;}
+    .btn:hover {background: #0ea5e9; color: white;}
+
+    /* Project Cards */
+    .projects-container {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
+    .project-card {background: #1e293b; border-radius: 12px; padding: 25px; box-shadow: 0 0 10px rgba(0,0,0,0.3); transition: 0.3s;}
+    .project-card:hover {transform: translateY(-8px); border: 1px solid #38bdf8;}
+    .project-card h3 {color: #38bdf8; margin-bottom: 10px;}
+    .project-card p {color: #cbd5e1;}
+
+    /* Skills Section */
+    .skills-container {display: flex; flex-wrap: wrap; gap: 15px;}
+    .skill {background: #1e293b; padding: 10px 20px; border-radius: 25px; border: 1px solid #38bdf8; transition: 0.3s;}
+    .skill:hover {background: #38bdf8; color: #0f172a;}
+
+    /* Contact */
+    .contact a {color: #38bdf8; text-decoration: none;}
+    footer {text-align: center; padding: 20px; background: #1e293b; color: #94a3b8;}
+
+    /* === Animations === */
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    @keyframes glow {
+      0% {box-shadow: 0 0 0px #38bdf8;}
+      50% {box-shadow: 0 0 18px #38bdf8;}
+      100% {box-shadow: 0 0 0px #38bdf8;}
+    }
+
+    .fade-in-up {animation: fadeInUp 1s ease forwards; opacity: 0;}
+    .fade-in {animation: fadeIn 1.2s ease forwards; opacity: 0;}
+    .glow {animation: glow 2.5s infinite ease-in-out;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo glow">LT</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero fade-in-up">
+    <h1>Hello, I'm <span>Lakshana</span></h1>
+    <p>Web Developer | AI Enthusiast | Creative Designer</p>
+    <a href="Lakshana_Resume.pdf" target="_blank" download><button class="btn">Download Resume</button></a>
+  </section>
+
+  <section id="about" class="fade-in-up">
+    <h2>About Me</h2>
+    <p>
+      I am Lakshana, I have completed my UG degree <b>B.Sc. Computer Science</b> at <b>Gandhigram Rural Institute</b>.
+      Currently, I am pursuing my PG degree <b>M.Sc. Artificial Intelligence</b> at <b>Bharathiar University</b>.
+      During my UG, I learned and practiced several programming languages including <b>C, C++, HTML, CSS, PHP, JavaScript, and SQL</b>.
+      I am passionate about developing creative, responsive web applications and exploring AI-driven technologies.
+    </p>
+  </section>
+
+  <section id="projects" class="fade-in-up">
+    <h2>Projects</h2>
+    <div class="projects-container">
+
+      <div class="project-card">
+        <h3>💎 Sri Kalyani Mobiles – E-Commerce Website</h3>
+        <p>
+          A complete mobile accessories website built using <b>HTML, CSS, JavaScript, PHP, and MySQL</b>.
+          Includes user authentication, dynamic product display, shopping cart, payment gateway with
+          GPay QR integration, and an order success module.
+        </p>
+        <p><b>Features:</b> User login, product management, dynamic cart, payment integration, responsive UI.</p>
+        <p><b>Tools:</b> HTML, CSS, PHP, MySQL, JS, XAMPP</p>
+        <a href="http://localhost/website/" target="_blank" class="btn" style="margin-top:10px;">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>
+          A personal portfolio showcasing my work, skills, and contact details. Built with HTML, CSS, and JavaScript
+          animations for a smooth, interactive user experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="fade-in-up">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">C</div>
+      <div class="skill">C++</div>
+      <div class="skill">SQL</div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in-up">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>📧 Email: <a href="mailto:lakshanathirunavukarasu@gmail.com">lakshanathirunavukarasu@gmail.com</a></p>
+      <p>🌍 LinkedIn: <a href="https://www.linkedin.com/in/lakshana-thirunavukarasu-7b75ba314" target="_blank">linkedin.com/in/lakshana-thirunavukarasu-7b75ba314</a></p>
+      <p>📱 Phone: +91 6379675875</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lakshana | All Rights Reserved
+  </footer>
+
+  <script>
+    // Scroll-based fade-in animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.classList.add('animate');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-in-up, .fade-in').forEach(el => observer.observe(el));
+
+    // Initial fade for hero section
+    window.addEventListener('load', () => {
+      document.querySelector('.hero').classList.add('fade-in-up');
+    });
+  </script>
+
+</body>
+</html>
