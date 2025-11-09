@@ -1,16 +1,26 @@
+// Wait until the page is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
 
-    const observer = new IntersectionObserver(entries => {
+  // Select all fade-in sections
+  const sections = document.querySelectorAll(".fade-in-up");
+
+  // Create an intersection observer
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.classList.add('animate');
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
         }
       });
-    });
-    document.querySelectorAll('.fade-in-up, .fade-in').forEach(el => observer.observe(el));
+    },
+    {
+      threshold: 0.2, // Trigger when 20% of the section is visible
+    }
+  );
 
-    
-    window.addEventListener('load', () => {
-      document.querySelector('.hero').classList.add('fade-in-up');
-
-    });
+  // Observe each section
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
