@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #fbf8f8;
   color: #333;
   line-height: 1.6;
 }
@@ -59,7 +59,7 @@ nav a:hover {
   min-height: 100vh;
   padding: 100px 10% 60px; /* top padding accounts for fixed header */
   text-align: center;
-  background: #fff;
+  background: #f9f5f5;
 }
 
 .hero-content {
@@ -248,3 +248,15 @@ footer {
     padding: 40px 6%;
   }
 }
+/* Appear animation when section comes into view */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
